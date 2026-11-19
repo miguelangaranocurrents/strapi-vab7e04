@@ -625,6 +625,9 @@ const RelationsInput = ({
        *
        */
       onChange(relation);
+
+      // Reset the search so the available relations are refreshed with the new selection omitted
+      setSearchParams({ _q: '', page: 1 });
     },
     [data, formatMessage, onChange, toggleNotification]
   );
